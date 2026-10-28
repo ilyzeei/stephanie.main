@@ -1,0 +1,7 @@
+name = "young-brook-5921"
+main = "worker.js"
+compatibility_date = "2023-10-01"
+
+[[kv_namespaces]]
+binding = "KEYSily"
+id = "7ce787ce5ec9486fad8189b7b44b88f0"
