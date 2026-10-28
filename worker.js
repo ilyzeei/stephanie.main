@@ -7,7 +7,6 @@ export default {
     // Генерация ключа
     if (u.pathname === "/gen") {
       const newKey = "ILY-" + Math.random().toString(36).substring(2, 6).toUpperCase() + "-" + Math.random().toString(36).substring(2, 6).toUpperCase();
-      // Обрати внимание: здесь KEYSily
       await env.KEYSily.put(newKey, "active");
       return new Response(newKey);
     }
@@ -15,7 +14,6 @@ export default {
     // Проверка ключа
     const key = u.searchParams.get("key");
     if (key) {
-      // Обрати внимание: здесь тоже KEYSily
       const valid = await env.KEYSily.get(key);
       if (!valid) return new Response("403 Invalid Key", { status: 403 });
       
